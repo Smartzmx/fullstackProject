@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullStack Project</title>
+    
+    <!-- Compiled and minified CSS Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            
+    <!-- Compiled and minified CSS Material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            
+</head>
+<body>
+
+  <!--1.- esto viene del CDN que es de la coumentacion para web -->
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
+
+  <!-- 2.- enlazamos el link de index.js -->
+  <script src="./js/main.js"></script>
+
+<div class="container center-align">
+  <div class="row center-align">
+    <h4>Fullstack Project</h4>
+  </div>
+
+  <div class="row center-align">
+
+    <div class="col s6">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="fullNameInput" type="text" class="validate" name="fullNameInput">
+          <label for="fullNameInput">Full name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">email</i>
+          <input id="emailInput" type="email" class="validate" name="emailInput">
+          <label for="emailInput">email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">vpn_key</i>
+          <input id="passwordInput" type="password" class="validate">
+          <label for="passwordInput">Password</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">done_all</i>
+          <input id="confirmPasswordInput" type="password" class="validate" name="passwordInput">
+          <label for="confirmPasswordInput">Confirm Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s3">
+          <p>
+            <label>
+              <input name="userTypeInput" type="radio" checked  value="Teacher" />
+              <span>Teacher</span>
+            </label>
+          </p>
+        </div>
+        <div class="input-field col s3">
+          <p>
+            <label>
+              <input name="userTypeInput" type="radio"  value="Parent"/>
+              <span>Parent</span>
+            </label>
+          </p>
+        </div>
+        <div class="input-field col s6">
+          <button onclick="addUser()" class="btn waves-orange deep-orange darken-1">Submit
+            <i class="material-icons right">cloud_upload</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Compiled and minified JavaScript Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+</body>
+</html>
